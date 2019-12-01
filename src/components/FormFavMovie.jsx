@@ -13,39 +13,39 @@ class FormFavMovie extends React.Component {
         this.onChange = this.onChange.bind(this);
     }
 
-    // onChange(e){
-    //     this.setState({
-    //         [e.target.name]: e.target.value,
-    //     });
-    // }
+    onChange(e){
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
+    }
 
 
 
-    // submitForm(e){
-    //     e.preventDefault();
-    //     const url = "https://post-a-form.herokuapp.com/api/movies/";
-    //     const config = {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(this.state),
-    //       };
+    submitForm(e){
+        e.preventDefault();
+        const url = "https://post-a-form.herokuapp.com/api/movies/";
+        const config = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(this.state),
+          };
     
     
-    //     fetch(url, config)
-    // .then(res => res.json())
-    //   .then(res => {
-    //     if (res.error) {
-    //       alert(res.error);
-    //     } else {
-    //       alert(`Film ajouté avec l'ID ${res}!`);
-    //     }
-    //   }).catch(e => {
-    //     console.error(e);
-    //     alert("Erreur lors de l'ajout d'un film");
-    //   });
-    // }
+        fetch(url, config)
+    .then(res => res.json())
+      .then(res => {
+        if (res.error) {
+          alert(res.error);
+        } else {
+          alert(`Film ajouté avec l'ID ${res}!`);
+        }
+      }).catch(e => {
+        console.error(e);
+        alert("Erreur lors de l'ajout d'un film");
+      });
+    }
 
 
 
